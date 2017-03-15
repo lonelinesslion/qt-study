@@ -1,0 +1,31 @@
+digraph encrypt{
+    node [fontname = "SimSun"]
+    resolution = 480;
+    dpi = 320;
+
+    QStringA [label = "QString codeA"]
+    QStringB [label = "QString codeB"]
+    QByteArrayA0 [label = "QByteArray encrypt"]
+    QByteArrayA1 [label = "QByteArray encrypt"]
+    QByteArrayB0 [label = "QByteArray decrypt"]
+    QByteArrayB1 [label = "QByteArray decrypt"]
+    key1 [label = "qint64 key"]
+    key2 [label = "qint64 key"]
+
+    from [label = "加密"]
+    to [label = "解密"]
+
+    from -> QStringA
+    QStringA -> QByteArrayA0 [label = "QString::toUtf8"]
+    QByteArrayA0 -> QByteArrayA1 [label = "for(i=0; i<encrypt.length; i++)\nencrypt[i] = encrypt[i]^key;"]
+    key1 -> QByteArrayA0 [arrowhead = none]
+    key1 -> QByteArrayA1
+    QByteArrayA1 -> QStringB [label = "QString::fromUtf8"]
+
+    QStringB -> to
+    to -> QByteArrayB0 [label = "QString::toUtf8"]
+    QByteArrayB0 -> QByteArrayB1 [label = "for(i=0; i<encrypt.length; i++)\nencrypt[i] = encrypt[i]^key;"]
+    key2 -> QByteArrayB0 [arrowhead = none]
+    key2 -> QByteArrayB1
+    QByteArrayB1 -> QStringA [label = "QString::fromUtf8"]
+}
