@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>ICO/clear.ico</file>
+        <file>ICO/decrypt_key.ico</file>
+        <file>ICO/delock.ico</file>
+        <file>ICO/encrypt.ico</file>
+        <file>ICO/fileSortIco.ico</file>
+        <file>ICO/lock.ico</file>
+        <file>ICO/open.ico</file>
+        <file>ICO/quit.ico</file>
+        <file>ICO/save.ico</file>
+        <file>ICO/saveAs.ico</file>
+        <file>ICO/toolBoxIco.ico</file>
+        <file>ICO/write.ico</file>
+        <file>ICO/picture.ico</file>
+        <file>ICO/enlarge.ico</file>
+        <file>ICO/left_last.ico</file>
+        <file>ICO/reduce.ico</file>
+        <file>ICO/right_next.ico</file>
+        <file>ICO/hide.ico</file>
+        <file>ICO/show.ico</file>
+        <file>ICO/help2.ico</file>
+        <file>ICO/ps.ico</file>
+    </qresource>
+</RCC>

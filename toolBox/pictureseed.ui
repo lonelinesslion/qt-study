@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pictureSeed</class>
+ <widget class="QMainWindow" name="pictureSeed">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>764</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icos.qrc">
+    <normaloff>:/new/prefix1/ICO/picture.ico</normaloff>:/new/prefix1/ICO/picture.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTextEdit" name="textEdit">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="picArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>488</width>
+         <height>409</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>764</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="openFile"/>
+    <addaction name="saveFile"/>
+    <addaction name="saveAs"/>
+    <addaction name="separator"/>
+    <addaction name="clearNotes"/>
+    <addaction name="separator"/>
+    <addaction name="lastPic"/>
+    <addaction name="nextPic"/>
+    <addaction name="separator"/>
+    <addaction name="quitApp"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>加密(&amp;C)</string>
+    </property>
+    <addaction name="encryptNotes"/>
+    <addaction name="decryptNotes"/>
+    <addaction name="separator"/>
+    <addaction name="lockChange"/>
+    <addaction name="unlockChange"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>图片(&amp;P)</string>
+    </property>
+    <addaction name="scrollBig"/>
+    <addaction name="scrollSmall"/>
+   </widget>
+   <widget class="QMenu" name="menu_I">
+    <property name="title">
+     <string>输入框(&amp;I)</string>
+    </property>
+    <addaction name="hideTextEdit"/>
+    <addaction name="showTextEdit"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_I"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="openFile">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/open.ico</normaloff>:/new/prefix1/ICO/open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>打开(&amp;O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="saveFile">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/saveAs.ico</normaloff>:/new/prefix1/ICO/saveAs.ico</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="clearNotes">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/clear.ico</normaloff>:/new/prefix1/ICO/clear.ico</iconset>
+   </property>
+   <property name="text">
+    <string>清除注释(&amp;R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="encryptNotes">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/encrypt.ico</normaloff>:/new/prefix1/ICO/encrypt.ico</iconset>
+   </property>
+   <property name="text">
+    <string>加密(&amp;E)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="decryptNotes">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/decrypt_key.ico</normaloff>:/new/prefix1/ICO/decrypt_key.ico</iconset>
+   </property>
+   <property name="text">
+    <string>解密(&amp;D)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="lockChange">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/lock.ico</normaloff>:/new/prefix1/ICO/lock.ico</iconset>
+   </property>
+   <property name="text">
+    <string>锁定修改(&amp;L)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="unlockChange">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/delock.ico</normaloff>:/new/prefix1/ICO/delock.ico</iconset>
+   </property>
+   <property name="text">
+    <string>解锁修改(&amp;U)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="lastPic">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/left_last.ico</normaloff>:/new/prefix1/ICO/left_last.ico</iconset>
+   </property>
+   <property name="text">
+    <string>上一张</string>
+   </property>
+  </action>
+  <action name="nextPic">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/right_next.ico</normaloff>:/new/prefix1/ICO/right_next.ico</iconset>
+   </property>
+   <property name="text">
+    <string>下一张</string>
+   </property>
+  </action>
+  <action name="scrollBig">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/enlarge.ico</normaloff>:/new/prefix1/ICO/enlarge.ico</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="scrollSmall">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/reduce.ico</normaloff>:/new/prefix1/ICO/reduce.ico</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="saveAs">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/save.ico</normaloff>:/new/prefix1/ICO/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>另存为</string>
+   </property>
+  </action>
+  <action name="quitApp">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/quit.ico</normaloff>:/new/prefix1/ICO/quit.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;W)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="hideTextEdit">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/hide.ico</normaloff>:/new/prefix1/ICO/hide.ico</iconset>
+   </property>
+   <property name="text">
+    <string>隐藏</string>
+   </property>
+  </action>
+  <action name="showTextEdit">
+   <property name="icon">
+    <iconset resource="icos.qrc">
+     <normaloff>:/new/prefix1/ICO/show.ico</normaloff>:/new/prefix1/ICO/show.ico</iconset>
+   </property>
+   <property name="text">
+    <string>显示</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icos.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>quitApp</sender>
+   <signal>triggered()</signal>
+   <receiver>pictureSeed</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
